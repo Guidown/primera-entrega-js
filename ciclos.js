@@ -77,11 +77,25 @@ function main() {
     }
   }
   function HuaweiMostrar() {
+    listaHuawei = [
+      "0-Huawei Mate 30 Pro (549$)",
+      "1-Huawei Mate 30 Pro (549$)",
+      "2-Huawei P40 Pro (349$)",
+      "3-Huawei P30 Lite (349$)",
+    ];
     let Huawei = parseInt(
       prompt(
-        "0-Huawei Mate 30 Pro (549$)\n1-Huawei P30 Pro (449$)\n2-Huawei P40 Pro (349$)\n3-Huawei P30 Lite (349$)\nPresione 'EXIT' para salir."
+        "0-Huawei Mate 30 Pro (549$)\n1-Huawei Mate 30 Pro (549$)\n2-Huawei P40 Pro (349$)\n3-Huawei P30 Lite (349$)\nPresione 'EXIT' para salir."
       )
     );
+    if ((Huawei >= 0) & (Huawei <= listaHuawei.length)) {
+      console.log(listaHuawei[Huawei]);
+      alert(listaHuawei[Huawei]);
+      ConsStock();
+    } else {
+      alert("Opcion no valida");
+      HuaweiMostrar();
+    }
   }
   function ConsStock(estacion) {
     if (Samsung == "Samsung Galaxy S10") {
